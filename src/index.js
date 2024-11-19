@@ -5,7 +5,7 @@ import Profile from './components/Profile';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
-  { path: '/', element: <Profile profileImage="https://cloudinary.com/150" firstName="John" lastName="Doe" email="johndoe@example.com" socialLinks={{ github: "https://github.com/johndoe", instagram: "https://instagram.com/johndoe", facebook: "https://facebook.com/johndoe" }} /> },
+  { path: '/', element: <Profile/> },
   // { path: '/test', element: <Test /> },
   // Add more routes here
 ])
