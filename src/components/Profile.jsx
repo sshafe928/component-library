@@ -1,35 +1,46 @@
-import {useState} from 'react'
-const Profile = ({profileImage, firstName, lastName, email, socialLinks}) => {
+import { useState } from 'react'
+import '../pages/css/Profile.css'
+
+const ProfileCard = ({
+  profileImage = 'https://via.placeholder.com/150', 
+  firstName, 
+  lastName, 
+  email, 
+  socialLinks = {}
+}) => {
     const [showInfo, setShowInfo] = useState(false);
     const linkEntries = Object.entries(socialLinks || {});
-    return(
+
+    return (
         <div className="profile">
             <header>
-                <h4>{profileImage}</h4>
-                <p>{firstName},{lastName}</p>
+                <img 
+                    src={profileImage} 
+                    alt={`${firstName} ${lastName}`} 
+                    className="profile-image" 
+                />
+                <p>{firstName} {lastName}</p>
             </header>
             <h1>{email}</h1>
             <div className="social-links">
-              {linkEntries.length > 0 ? (
-                linkEntries.map(([platform, url], index) => (
-                  <a 
-                    key={index} 
-                    href={url} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="social-link"
-                  >
-                    {platform}
-                  </a>
-                ))
-              ) : (
-                <p>No social links available.</p>
-              )}
-          </div>
+                {linkEntries.length > 0 ? (
+                    linkEntries.map(([platform, url], index) => (
+                        <a 
+                            key={index} 
+                            href={url} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="social-link"
+                        >
+                            {platform}
+                        </a>
+                    ))
+                ) : (
+                    <p>No social links available.</p>
+                )}
+            </div>
         </div>
     )
 }
 
-export default Profile;
-
-
+export default ProfileCard;
