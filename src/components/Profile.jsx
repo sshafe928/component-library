@@ -1,5 +1,14 @@
-const ProfileCard = ({ profileImage, firstName, lastName, email, socialLinks = {} }) => {
-    console.log('ProfileCard Props:', { profileImage, firstName, lastName, email, socialLinks });
+const ProfileCard = ({
+    profileImage = "https://cloudinary.com/150", 
+    firstName = "John", 
+    lastName = "Doe", 
+    email = "johndoe@example.com", 
+    socialLinks = {
+        github: "https://github.com/johndoe", 
+        instagram: "https://instagram.com/johndoe", 
+        facebook: "https://facebook.com/johndoe"
+    }
+}) => {
     return (
         <div className="profile">
             <header>

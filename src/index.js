@@ -1,4 +1,4 @@
-import React, { Profiler } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import ProfilePage from './components/Profile';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
