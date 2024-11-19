@@ -1,11 +1,10 @@
 import React, { Profiler } from 'react';
 import ReactDOM from 'react-dom/client';
-import './pages/css/index.css';
-import Profile from './components/Profile';
+import ProfilePage from './components/Profile';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
-  { path: '/', element: <Profile/> },
+  { path: '/', element: <ProfilePage/> },
   // { path: '/test', element: <Test /> },
   // Add more routes here
 ])
