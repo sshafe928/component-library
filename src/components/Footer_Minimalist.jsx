@@ -1,4 +1,4 @@
-const ProfileCard = ({
+const MinimalFooter = ({
     logo = //uploaded cloudinary logo ,
     services = {Shipping:'link', returns_exchanges: 'link', contact: 'link' },
     socials ={Instagram: 'link', Github:'link', Facebook: 'link'},
@@ -32,3 +32,5 @@ const ProfileCard = ({
         </div>
     )
 }
+
+export default MinimalFooter;
