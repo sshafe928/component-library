@@ -14,7 +14,7 @@ const MinimalFooter = ({
         <div class="wave" id="wave4"></div>
     </div>
 
-    <img src={logo} alt="" className="logo" />
+    <img src={logo} width="350" alt="Logo" className="logo" />
 
     <ul class="social-icon">
         <li class="social-icon__item">
