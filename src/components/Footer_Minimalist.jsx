@@ -1,35 +1,55 @@
+import '../pages/css/MinimalFooter.css'
+
 const MinimalFooter = ({
-    logo = //uploaded cloudinary logo ,
-    services = {Shipping:'link', returns_exchanges: 'link', contact: 'link' },
-    socials ={Instagram: 'link', Github:'link', Facebook: 'link'},
-    info ={privacy: 'privacy', about: 'link', terms_of_service: 'terms of service link' }
+    logo = "https://res.cloudinary.com/dy2nnbnek/image/upload/v1732171177/Screenshot__54_-removebg-preview_bcqxfi.png" ,
+
+    socials ={Instagram: 'link', Github:'link', Facebook: 'link', linkedin: 'link'},
 }) => {
     return (
-        <div className="footer">
-            <div className="logo">{logo}</div>
-            <div className="about">
-                <ul>
-                    <li className="Shipping">{services.Shipping}</li>
-                    <li className="returns_exchanges">{services.returns_exchanges}</li>
-                    <li className="conact">{services.contact}</li>
-                </ul>
-            </div>
-            <div className="socials">
-                <ul>
-                    <li className="insta">{socials.Instagram}</li>
-                    <li className="github">{socials.Github}</li>
-                    <li className="facebook">{socials.Facebook}</li>
-                </ul>
-            </div>
-            <div className="services">
-                <ul>
-                    <li className="privacy">{info.privacy}</li>
-                    <li className="about">{info.about}</li>
-                    <li className="terms_of_service">{info.terms_of_service}</li>
-                </ul>
-            </div>
+        <footer class="footer">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
 
-        </div>
+    <img src={logo} alt="" className="logo" />
+
+    <ul class="social-icon">
+        <li class="social-icon__item">
+            <a class="social-icon__link" href={socials.Facebook}>
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li class="social-icon__item">
+            <a class="social-icon__link" href={socials.Github}>
+                <i class="fa fa-github"></i>
+            </a>
+        </li>
+        <li class="social-icon__item">
+            <a class="social-icon__link" href={socials.linkedin}>
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </li>
+        <li class="social-icon__item">
+            <a class="social-icon__link" href={socials.Instagram}>
+                <i class="fa fa-instagram"></i>
+            </a>
+        </li>
+    </ul>
+    <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+    </ul>
+    <p>&copy;2024 Sabrina Shafer | All Rights Reserved</p>
+    </footer>
+
+
     )
 }
 
