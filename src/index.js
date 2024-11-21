@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import ProfilePage from './components/Profile';
+import FooterPage from './components/Footer_Minimalist';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   { path: '/', element: <ProfilePage/> },
-  // { path: '/test', element: <Test /> },
+  { path: '/footer', element: <FooterPage /> },
   // Add more routes here
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
