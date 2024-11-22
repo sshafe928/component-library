@@ -1,4 +1,4 @@
-import '../pages/css/MinimalFooter.css'
+import '../pages/css/MinimalFooter.css';
 
 const MinimalFooter = ({
     logo = "https://res.cloudinary.com/dy2nnbnek/image/upload/v1732171177/Screenshot__54_-removebg-preview_bcqxfi.png" ,
