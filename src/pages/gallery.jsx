@@ -16,7 +16,7 @@ function GalleryPage() {
         { pictureName: "Image Name", pictureURL: "https://res.cloudinary.com/dy2nnbnek/video/upload/v1729721084/samples/elephants.mp4 ", altText: "Elephant" },
         { pictureName: "Image Name", pictureURL: "https://res.cloudinary.com/dy2nnbnek/image/upload/v1729721091/cld-sample-2.jpg ", altText: "mountain in clouds" },
         { pictureName: "Image Name", pictureURL: "https://res.cloudinary.com/dy2nnbnek/image/upload/v1729721090/samples/coffee.jpg ", altText: "coffee pots" },
-        { pictureName: "Image Name", pictureURL: " ", altText: "Description of the image" },
+        { pictureName: "Image Name", pictureURL: "https://res.cloudinary.com/dy2nnbnek/image/upload/v1729721090/samples/dessert-on-a-plate.jpg ", altText: "Dessert" },
         { pictureName: "Image Name", pictureURL: " ", altText: "Description of the image" },
         { pictureName: "Image Name", pictureURL: " ", altText: "Description of the image" },
         { pictureName: "Image Name", pictureURL: " ", altText: "Description of the image" },
@@ -42,9 +42,9 @@ function GalleryPage() {
     console.log('Rendering Gallery Page');
     return (
         <>
-        <div className="profile">
+        <a href="/"><button className="btn" id="back">Back to Home</button></a>
+        
             <Gallery images={imageList}/>
-        </div>
         </>
     );
 }
