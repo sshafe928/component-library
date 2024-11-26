@@ -13,7 +13,7 @@ const Gallery = ({images}) =>{
                     title={image.pictureName}
                     className="gallery-image"
                 />
-                <p>{image.pictureName}</p>
+                <p className="overlay">{image.pictureName}</p>
                 </div>
             ))
             ) : (

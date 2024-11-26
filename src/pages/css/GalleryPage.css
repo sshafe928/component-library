@@ -1,14 +1,60 @@
+/* Gallery container */
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 10px; 
+    justify-content: center;
+    padding: 20px; 
 }
+
+/* Individual gallery item */
 .gallery-item {
-    width: 200px;
-    text-align: center;
+    position: relative;
+    flex: 1 1 250px; 
+    max-width: 300px; 
+    height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 10px; 
+    box-sizing: border-box; 
 }
+
+/* Image styling */
 .gallery-image {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 100%;
+    object-fit: cover; 
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+/* Show the overlay and darken the image on hover */
+.gallery-item:hover .gallery-image {
+    filter: brightness(50%);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1; 
+}
+
+/* Text inside the overlay */
+.overlay p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
 }

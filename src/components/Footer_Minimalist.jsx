@@ -2,7 +2,6 @@ import '../pages/css/MinimalFooter.css';
 
 const MinimalFooter = ({
     logo = "https://res.cloudinary.com/dy2nnbnek/image/upload/v1732171177/Screenshot__54_-removebg-preview_bcqxfi.png" ,
-    lines = "https://res.cloudinary.com/dy2nnbnek/image/upload/v1732225076/Screenshot__11_-removebg-preview_nhpgup.png",
     socials ={Instagram: 'link', Github:'link', Facebook: 'link', linkedin: 'link'},
 }) => {
     return (
