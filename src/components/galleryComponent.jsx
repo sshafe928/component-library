@@ -1,27 +1,25 @@
 import React from 'react';
 import '../pages/css/GalleryPage.css'
 
-const Gallery = ({images}) =>{
-    return (
-        <div className="gallery">
-            {images && images.length > 0 ? (
-            images.map((image, index) => (
-                <div key={index} className="gallery-item">
-                <img
-                    src={image.pictureURL}
-                    alt={image.altText}
-                    title={image.pictureName}
-                    className="gallery-image"
-                />
-                <p className="overlay">{image.pictureName}</p>
-                </div>
-            ))
-            ) : (
-            <p>No images available</p>
-            )}
+const Gallery = ({ images }) => {
+return (
+    <div className="gallery-container">
+    {images.map((image, index) => (
+        <div key={index} className="gallery-item">
+        <img
+            src={image.pictureURL}
+            alt={image.altText}
+            className="gallery-image"
+        />
+        <div className="gallery-caption">
+            <h3>{image.pictureName}</h3>
         </div>
-        );
 
-}
+        <p className="overlay">{image.description}</p>
+        </div>
+    ))}
+    </div>
+);
+};
 
 export default Gallery;
